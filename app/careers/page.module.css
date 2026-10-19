@@ -1,0 +1,331 @@
+.main {
+  background-color: #030611;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Gradients */
+.bgGlow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(97, 152, 254, 0.15) 0%, rgba(3, 6, 17, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroSection {
+  flex: 1;
+  padding: 180px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(97, 152, 254, 0.05);
+  border: 1px solid rgba(97, 152, 254, 0.2);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8ba2f9;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6198fe;
+  box-shadow: 0 0 12px #6198fe;
+}
+
+.title {
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 600;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+}
+
+.title span {
+  background: linear-gradient(135deg, #ffffff 0%, #6198fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 650px;
+  margin-bottom: 80px;
+}
+
+/* Positions Grid */
+.positionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .positionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.positionCard {
+  background: rgba(10, 14, 29, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.positionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.positionCard:hover {
+  transform: translateY(-8px);
+  background: rgba(14, 20, 42, 0.8);
+  border-color: rgba(97, 152, 254, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(97, 152, 254, 0.05);
+}
+
+.positionCard:hover::before {
+  opacity: 1;
+}
+
+.positionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.positionHeader h3 {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.deptTag {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.positionType {
+  font-size: 13px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.positionCard p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.applyBtn {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.applyBtn:hover {
+  background: #fff;
+  color: #030611;
+  border-color: #fff;
+}
+
+/* Form Section */
+.formSection {
+  background: #010205;
+  padding: 120px 24px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  z-index: 1;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 700px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.formHeader h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.formHeader p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+
+.applyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: rgba(10, 14, 29, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 48px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.formRow {
+  display: flex;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.formGroup label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgba(97, 152, 254, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn {
+  background: #fff;
+  color: #030611;
+  border: none;
+  padding: 18px 32px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    flex-direction: column;
+  }
+  .applyForm {
+    padding: 32px 24px;
+  }
+  .positionCard {
+    padding: 32px 24px;
+  }
+}

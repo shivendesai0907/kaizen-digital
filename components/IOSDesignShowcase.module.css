@@ -1,0 +1,104 @@
+.section {
+  padding: 120px 5%;
+  background: #000;
+  overflow: hidden;
+  perspective: 2000px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(to bottom, #fff, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+.perspectiveContainer {
+  transform-style: preserve-3d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.interactiveGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1600px;
+  transform-style: preserve-3d;
+}
+
+.gridItem {
+  position: relative;
+  aspect-ratio: 1/2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.1), transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 1400px) {
+  .interactiveGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .interactiveGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .interactiveGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .section {
+    perspective: none; /* Disable 3D on mobile for performance */
+  }
+}
+
+@media (max-width: 480px) {
+  .interactiveGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

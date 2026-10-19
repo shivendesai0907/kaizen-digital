@@ -1,0 +1,271 @@
+.main {
+  background-color: #030611;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(97, 152, 254, 0.15) 0%, rgba(3, 6, 17, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.jobHeader {
+  padding: 180px 0 60px 0;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #fff;
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.metaTags {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.tag {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jobBody {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 80px 0;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding-left: 32px;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6198fe;
+  box-shadow: 0 0 10px #6198fe;
+}
+
+.notFound {
+  padding: 180px 0;
+  text-align: center;
+  flex: 1;
+}
+
+.notFound h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-block;
+  background: #6198fe;
+  color: #030611;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(97, 152, 254, 0.3);
+}
+
+/* Form Section */
+.formSection {
+  background: #010205;
+  padding: 80px 24px 120px 24px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  z-index: 1;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 800px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.formHeader h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.formHeader p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+
+.applyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: rgba(10, 14, 29, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 48px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.formRow {
+  display: flex;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.formGroup label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgba(97, 152, 254, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn {
+  background: #fff;
+  color: #030611;
+  border: none;
+  padding: 18px 32px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    flex-direction: column;
+  }
+  .applyForm {
+    padding: 32px 24px;
+  }
+}

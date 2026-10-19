@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask" clip-path="url(#clip0_152_274)">
+<g id="image" clip-path="url(#clip1_152_274)">
+<g id="Group">
+<path id="Vector" d="M41.4032 25.9599C41.6628 24.6817 41.7992 23.3573 41.7992 21.9999C41.7992 11.0637 32.9354 2.19995 21.9992 2.19995C11.063 2.19995 2.19922 11.0637 2.19922 21.9999C2.19922 32.9361 11.063 41.7999 21.9992 41.7999C24.4368 41.7999 26.771 41.3577 28.9292 40.5525" stroke="var(--stroke-0, white)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M34.8691 19.0299C34.8691 22.8579 31.7671 25.9599 27.9391 25.9599C24.1111 25.9599 21.0091 22.8579 21.0091 19.0299C21.0091 15.2019 24.1111 12.0999 27.9391 12.0999C31.7671 12.0999 34.8691 15.2019 34.8691 19.0299ZM34.8691 19.0299V35.8599C34.8691 37.7057 34.8691 38.6275 35.1705 39.3557C35.5709 40.3259 36.3431 41.0981 37.3155 41.4985C38.0415 41.7999 38.9633 41.7999 40.8091 41.7999M10.1191 18.0399H14.0791" stroke="var(--stroke-0, white)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M27.9401 19.7075V19.3313M22.0001 34.3749C18.8827 34.3771 15.9479 32.9097 14.0801 30.4149M28.4351 19.5249C28.4351 19.7977 28.2129 20.0199 27.9401 20.0199C27.6673 20.0199 27.4451 19.7977 27.4451 19.5249C27.4451 19.2521 27.6673 19.0299 27.9401 19.0299C28.2129 19.0299 28.4351 19.2521 28.4351 19.5249Z" stroke="var(--stroke-0, white)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_152_274">
+<rect width="44" height="44" fill="white"/>
+</clipPath>
+<clipPath id="clip1_152_274">
+<rect width="44" height="44" fill="white"/>
+</clipPath>
+</defs>
+</svg>

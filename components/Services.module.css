@@ -1,0 +1,315 @@
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #eff4fa;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.description {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1650px;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.card {
+  background: #10141e; /* Based on the gradient stops in design context */
+  background: linear-gradient(135deg, rgba(36,46,67,1) 0%, rgba(20,26,38,1) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 275px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  background-color: #6198fe;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  margin-bottom: auto;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.22px;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Center Logo Card */
+.logoCard {
+  background: linear-gradient(180deg, #6198fe 0%, #3e7ced 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: inset 0px 0px 41px 19px #a1c2ff;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoText {
+  height: 36px;
+  width: auto;
+}
+
+.logoDot {
+  height: 6px;
+  width: 6px;
+  margin-top: 8px;
+}
+
+.logoMark {
+  height: 80px;
+  width: auto;
+}
+
+/* SaaS Section */
+.saasSection {
+  display: flex;
+  align-items: center;
+  max-width: 1650px;
+  width: 100%;
+  gap: 80px;
+  padding: 60px 0;
+}
+
+.saasContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.saasBadge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+.saasBadgeDot {
+  width: 6px;
+  height: 6px;
+  background: #6198fe;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.saasTitle {
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.saasDescription {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.saasGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.saasItem {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 15px;
+  color: #d4d4d4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.saasItemDot {
+  width: 6px;
+  height: 6px;
+  background: #489afe;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 8px #489afe;
+}
+
+.primaryButton {
+  background: linear-gradient(180deg, #489afe 0%, #126ed8 100%);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.saasImageContainer {
+  flex: 1.2;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.saasImageContainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(72, 154, 254, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.saasImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .saasSection {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+  
+  .saasGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .title, .saasTitle {
+    font-size: 32px;
+  }
+  .saasSection {
+    padding: 20px 0;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,236 @@
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%, #000000 100%),
+    url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.content {
+  text-align: left;
+  width: 100%;
+  max-width: 893px;
+  flex: 1;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 16px;
+  border-radius: 100px;
+  width: fit-content;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.title {
+  font-size: 60px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+
+.statsWrapper {
+  margin-top: 60px;
+}
+
+.actions {
+  display: flex;
+  gap: 10.7px;
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, rgb(42, 138, 231) 0%, rgb(0, 96, 190) 55%, rgb(0, 49, 109) 100%);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 20px 70px -20px rgba(0, 94, 208, 0.5);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 30px 90px -20px rgba(0, 94, 208, 0.65);
+}
+
+.secondaryBtn {
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mockupContainer {
+  flex: 1;
+  max-width: 900px;
+  margin-top: 50px;
+  margin-right: -100px;
+  /* Reduced bleed to fix zoomed feel */
+}
+
+.heroDashboardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .mockupContainer {
+    margin-right: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .title br {
+    display: none;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .hero {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
