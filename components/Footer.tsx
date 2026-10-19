@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <MapPin size={16} color="#489afe" />
-                <span>Kolhapur · Dubai · London</span>
+                <span>India · Dubai · London</span>
               </div>
             </div>
 
